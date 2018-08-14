@@ -3,9 +3,12 @@ import './Main.css'
 
 const Main = () => {
     return (
-        <div className='container'>
+        <div className="wrapper">
+            <div className='container'>
 
+            </div>
         </div>
+
     );
 };
 
