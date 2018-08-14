@@ -1,13 +1,13 @@
 import React from 'react';
 import bottle from './bottle.jpg';
-import style from './Card.css'
+import styles from './Card.css'
 
 const Card = () => {
 
     return (
         <div className='beer_card'>
             <figure>
-                <img src={bottle} alt=""/>
+                <img src={bottle} alt="" className={styles.bottle}/>
                 <figcaption>
                     <span>description</span>
                     <span>abv</span>
