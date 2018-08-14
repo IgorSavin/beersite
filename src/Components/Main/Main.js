@@ -1,9 +1,10 @@
 import React from 'react';
-import './Main.css'
+// import './Main.css'
+import style from './Main.css';
 
 const Main = () => {
     return (
-        <div className='container'>
+        <div className={style.container}>
 
         </div>
     );

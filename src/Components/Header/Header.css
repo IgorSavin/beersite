@@ -1,0 +1,8 @@
+.container {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    background-color: #7e7e1e;
+    /* flex-wrap: wrap; */
+    border: 3px solid rgb(8, 1, 1);
+    height: 30rem;
+}
