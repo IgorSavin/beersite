@@ -15,6 +15,7 @@ const Gallery = (props) => {
                 description={el.description} 
                 key={el.id}
                 id={el.id}
+                isActive={el.isActive}
                 />)}
         </div>
     );

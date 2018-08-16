@@ -1,19 +1,37 @@
 import React from 'react';
 import styles from './Card.css';
 import star from './star.svg'
+import starActive from './starActive.svg'
+import {favourite, favouriteOff} from '../../react/actions/favoriteActions'
+import {connect} from 'react-redux'
 
 const Card = (props) => {
+
+    const favouriteOn= () => {
+        props.favouriteOn(props.id)
+    }
+
+    const favouriteOff = () => {
+        props.favouriteOff(props.id)
+    }
 
     return (
         <div className={styles.beerCard}>
 
+
+
+            {props.isActive 
+                ? <img src={starActive} alt="favourite" className={styles.star} onClick={favouriteOff}/>
+                : <img src={star} alt="favourite" className={styles.star} onClick={favouriteOn}/>
+            }
             
-            <img src={star} alt="favourite" className={styles.star}/>
+            
+
             <div className={styles.imgCont}>
                 <img src={props.img} alt="beer" className={styles.bottleImg}/>
                 <div className={styles.overlay}>
                     <p className={styles.desc}>
-                    {props.description}</p>
+                    {props.description.substring(0,280)+ '...'}</p>
                 </div>
             </div>
 
@@ -31,4 +49,16 @@ const Card = (props) => {
     );
 };
 
-export default Card;
+function MDTP (dispatch) {
+    return {
+        favouriteOn: function(id) {
+            dispatch(favourite(id))
+        },
+
+        favouriteOff: function(id) {
+            dispatch(favouriteOff(id))
+        }
+    }
+}
+
+export default  connect(null, MDTP) (Card);
