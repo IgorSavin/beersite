@@ -1,0 +1,39 @@
+.sortBtnCont {
+    /* flex-basis: 30%; */
+    width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 8px;
+}
+
+.sortBy {
+    color: #2c2c26;
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.sortBtn {
+    flex-basis: 60%;
+    margin-bottom: 15px;
+    color: #921e2d;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #c7c7c3;
+    padding: 10px;
+    border-radius: 6px
+}
+
+.sortBtn:hover {
+    background-color: #921e2d;
+    color: #fff;
+}
+
+.sortBtn:last-child {
+    margin-bottom: 0;
+}

@@ -1,12 +1,16 @@
 import React from 'react';
 import Card from '../Card/Card'
 import {connect} from 'react-redux'
+import Sort from '../Sort/Sort'
 import styles from './Gallery.css'
 // import {galleryAsync} from '../../react/actions/galleryActions'
 
 const Gallery = (props) => {
     return (
+        // <div className={styles.gslleryCont}>
+            
         <div className={styles.cardCont}>
+            <Sort/>
             {props.galleryArr.map(el => <Card 
                 img={el.image_url}
                 name={el.name} 
@@ -18,6 +22,7 @@ const Gallery = (props) => {
                 isActive={el.isActive}
                 />)}
         </div>
+        // </div>
     );
 };
 

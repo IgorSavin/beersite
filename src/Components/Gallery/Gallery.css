@@ -3,4 +3,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding-left: 50px;
+    padding-top: 30px;
 }
+
+/* .galleryCont {
+    display: flex;
+} */

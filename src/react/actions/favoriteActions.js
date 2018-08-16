@@ -7,3 +7,4 @@ export const favouriteOff = (id) => ({
     type: 'DISACTIVE',
     id
 })
+
