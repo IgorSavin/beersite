@@ -1,21 +1,32 @@
-.busket {
-    padding: 10px 10px;
-    background-color: green;
-    width: 220px;
-    overflow: scroll;
-    height: 95px;
-}
+
 .items {
     display: flex;
+    justify-content: space-around; 
     margin-bottom: 10px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 .value {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 17px;
+    margin-right: 17px;
 }
 .price {
+    font-style: italic;
+    display: block;
+    margin-top: 5px;
+    /* color: #454545; */
     margin-left: 10px;
+}
+.price::after {
+    content: '';
+    display: block;
+    background-color: #ef8a8c;
+    width: 100px;
+    height: 3px;
+    margin-top: 10px;
+    /* border-bottom: 2px solid red; */
+}
+.title {
+    color: #414141;    
 }
 .text {
     text-align: center;
@@ -26,6 +37,21 @@
 }
 .unAdd {
     margin-bottom: 10px;
+}
+
+.add, .unAdd {
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    color: #a22c4d;
+    border: 1px solid #a22c4d;
+}
+
+
+
+.imageSize {
+    width: 50px;
+    height: 100px;
 }
 /* .p {
     max-width: 50px;

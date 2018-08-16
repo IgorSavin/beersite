@@ -2,30 +2,42 @@
 
 import React from 'react';
 import styles from './Busket.css';
+import { connect } from 'react-redux';
 
-const Busket = () => {
+const Busket = ({massItems, name, props, price, img}) => {
     return (
-        <div className={styles.buy}>
-    <div className={styles.busket}>
-    <div className={styles.items}>
-      <img src="https://placeimg.com/100/100/any" alt=""/>
-      <div className={styles.text}>Three leg log
-      <div>
-          <button className={styles.add}>+</button>
-          <span className={styles.value}>3</span>
-          <button className={styles.unAdd}>-</button>
-          </div>
-          <span className={styles.price}>Price : $450</span>
-        </div>
-      </div>
-      
-     
-      
+        
+        <div>
+        {console.log(props)}    
+        
+           
+                    <div className={styles.items}>
+                        <img src={img} alt="" className={styles.imageSize}/>
+                    <div className={styles.text}>
+                        <span className={styles.title}>{name}</span>
+                            <div className={styles.click}>
+                                <button className={styles.add}>+</button>
+                                <span className={styles.value}>3</span>
+                                <button className={styles.unAdd}>-</button>
+                                </div>
+                        <span className={styles.price}>Price : ${price}</span>
+                        </div>
+                    </div>
+            
+            
+            
 
-    </div>
-    <button>Buy</button>
+    
+    
+   
     </div>
     );
 }
 
-export default Busket;
+function mSTP (store) {
+    return {
+        massItems: store.massItems,
+    }
+}
+
+export default connect(mSTP, null)(Busket);
