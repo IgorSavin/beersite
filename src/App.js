@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import './App.css';
+import BeerPage from './Components/BeerPage/BeerPage';
+import FoodForm from './Components/FoodForm/FoodForm';
+import styles from './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-
+      <div className={styles.App}>
+        <FoodForm/>
+        <BeerPage/>
       </div>
     );
   }

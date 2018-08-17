@@ -1,0 +1,39 @@
+.foodFrom {
+    background-color: #e3e3e3;
+}
+
+.foodFrom__form {
+    padding: 1rem;
+}
+
+.foodFrom__input {
+    margin-right: 0.7rem;
+    font-size: 1.3rem;
+    color: #921e2d;
+}
+
+.foodFrom__input:focus {
+    outline: 3px solid rgba(146, 30, 45, 0.4);
+    background-color: #fff;
+}
+
+.foodFrom__btn {
+    /*background-image: url('./magnifier.png');*/
+    /*background-size: contain;*/
+    color: #921e2d;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #c7c7c3;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+}
+
+.foodFrom__btn:hover {
+    background-color: #921e2d;
+    color: #fff;
+}
