@@ -7,9 +7,24 @@ import {filterData} from '../../react/actions/filterDataActions';
 
 const BeerFilter =(props)=>{
     console.log(props);
-    const getBeer =  (e)=> {
-         props.getFilterBeer(props.gallery,e.target.dataset.first,e.target.dataset.second);
+    const getBeer = (e)=> {
+         props.getFilterBeer(props.gallery,e.target.dataset.first, e.target.dataset.second);
 
+       // function handleMenuClick({target}){
+       //     const arr = [...target.parentNode.children];
+       //     console.log(arr);
+       //
+       //     arr.forEach(el=> {
+       //         if (el === target) {
+       //             target.className= styles.beer_menu__button;
+       //             console.log(el);
+       //         } else {
+       //              target.className= `${styles.beer_menu__button} ${styles.is_active}`;
+       //             console.log(el);
+       //         }
+       //     })
+       // }
+       //  handleMenuClick(e);
     };
     return (
     <nav className={styles.beer_menu}>

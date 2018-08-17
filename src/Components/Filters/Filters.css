@@ -34,6 +34,7 @@
     margin-right: 2rem;
     padding: 0.5rem 2rem;
     transition: 1s;
+    /*border-bottom: 0.225rem solid  transparent;*/
 }
 
 .beer_menu__button:last-child {
@@ -44,12 +45,16 @@
     color: #921e2d;
     cursor: pointer;
     align-items: center;
-
+    /*border-bottom: 0.225rem solid  #921e2d;*/
 }
 
 .img {
     display: none;
 }
+
+/*.is_active{*/
+    /*color: green;*/
+/*}*/
 
 @media (min-width: 768px) {
     .beer_menu__buttons {
