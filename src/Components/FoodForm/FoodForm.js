@@ -15,7 +15,12 @@ function FoodForm(props) {
 
     function foodSearch(e) {
         e.preventDefault();
-        (props.inpData !== '' !==' ' !=='  ' !=='   ') ?  props.foodRequest(props.inpData) : null;
+        const reg = /^\s+/;
+        if (!reg.test(props.inpData) && props.inpData !=='') {
+            props.foodRequest(props.inpData);
+        } else {
+            return;
+        }
     }
 
     return (

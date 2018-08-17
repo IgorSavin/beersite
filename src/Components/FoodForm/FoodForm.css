@@ -10,11 +10,19 @@
     margin-right: 0.7rem;
     font-size: 1.3rem;
     color: #921e2d;
+    border: 1px solid #921e2d;
+    border-radius: 3px;
 }
 
 .foodFrom__input:focus {
     outline: 3px solid rgba(146, 30, 45, 0.4);
     background-color: #fff;
+    border: 1px solid #921e2d;
+    border-radius: 3px;
+}
+.foodFrom__input::placeholder {
+    color: rgba(146, 30, 45, 0.8);
+    padding-left: 0.2rem;
 }
 
 .foodFrom__btn {

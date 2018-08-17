@@ -103,7 +103,7 @@ export default function beerpage (state = {
         "Chocolate coated macaroons"
     ],
     brewers_tips: "Lightly toast the coconut chips to allow better interaction with the hot wort.",
-    contributed_by: "Sam Mason <samjbmason>"
+    contributed_by: "Sam Mason <samjbmason>",
 },
   action) {
         switch (action.type) {

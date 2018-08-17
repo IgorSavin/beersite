@@ -9,7 +9,7 @@ function addFoodAPI(data) {
 
 function getFoodAPI(value) {
     return axios.get(`https://api.punkapi.com/v2/beers?page=1&per_page=80&food=${value}`)
-        .then(data => data.status === 200 ? data.data : null)
+        .then(data => data.status === 200 ? data.data : [])
         .catch(error => console.log('Getting data from server error: ' + error));
 }
 

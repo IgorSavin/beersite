@@ -94,14 +94,21 @@
     background-color: #e1e1e1;
     border-radius: 5px;
 }
-
 .beerPage__Value {
+    margin: 0;
+    position: relative;
+    height: 2.7rem;
     display: block;
     line-height: 2rem;
     font-size: 1.5rem;
     text-align: left;
     padding-left: 0.5rem;
     border-radius: 5px;
+}
+.beerPage__progressBar__text {
+    position: absolute;
+    top: 6px;
+    width: 20rem;
 }
 
 .beerPage__abvValue {
