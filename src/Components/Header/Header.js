@@ -9,7 +9,8 @@ const Header = ({randomProduct: rp}) => {
 
     return (
         <div className={styles.header__wrapper}>
-            <div className={[styles.container, styles.header__container].join(' ')}>
+            <div className={styles["header__container"]}>
+            {/*<div className={[styles.container, styles.header__container].join(' ')}>*/}
                 <span className={styles["header__menu-icon"]}>
                     <i className="fas fa-bars"></i>
                 </span>
@@ -37,7 +38,6 @@ const Header = ({randomProduct: rp}) => {
                     <div className={styles["header__random-product"]}>
                         {rp.hasOwnProperty('id') ?
                             <Card
-                                className={styles["beerCard--random"]}
                                 img={rp.image_url}
                                 name={rp.name}
                                 abv={rp.abv}
@@ -45,7 +45,6 @@ const Header = ({randomProduct: rp}) => {
                                 description={rp.description}
                                 key={rp.id}
                                 id={rp.id}
-                                isActive={false}
                             /> : null
                         }
                     </div>

@@ -17,7 +17,9 @@ Header {
 }
 
 .header__container {
-    margin: 0 0.75rem;
+    min-width: 320px;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 .header__menu-icon {
@@ -73,7 +75,7 @@ Header {
 
 .slide-inner {
     display: none;
-    width: 60%;
+    max-width: 60%;
     padding-top: 8rem;
     font-family: 'Jura', sans-serif;
     font-weight: 300;
@@ -104,10 +106,12 @@ Header {
 }
 
 @media (min-width: 768px) {
+    .header__wrapper  {
+        padding: 1rem 3rem;
+    }
+
     .header__container {
         position: relative;
-        margin: 0 3rem;
-        padding-top: 1rem;
     }
 
     .header__menu-icon {
@@ -134,6 +138,7 @@ Header {
 
     .header__content {
         display: flex;
+        justify-content: space-between;
     }
 
     .header__random-product {
@@ -156,6 +161,7 @@ Header {
         font-weight: 300;
         font-size: 3rem;
         line-height: 3.25rem;
+        max-width: 32rem;
         padding-top: 4rem;
     }
 

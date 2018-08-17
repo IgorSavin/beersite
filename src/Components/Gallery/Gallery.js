@@ -7,7 +7,7 @@ import styles from './Gallery.css'
 const Gallery = (props) => {
     return (
         <div className={styles.cardCont}>
-            {props.galleryArr.map(el => <Card 
+            {props.gallery.map(el => <Card
                 img={el.image_url}
                 name={el.name} 
                 abv={el.abv}
@@ -23,7 +23,7 @@ const Gallery = (props) => {
 
 function MSTP (state) {
     return {
-        galleryArr: state.galleryArr
+        gallery: state.gallery
     }
 }
 

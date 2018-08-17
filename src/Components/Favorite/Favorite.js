@@ -4,9 +4,11 @@ import {connect} from 'react-redux'
 import styles from '../Gallery/Gallery.css'
 
 const Favorite = (props) => {
+    console.log('Fav', props);
+    // if (props.favorites.length === 0) return;
     return (
         <div className={styles.cardCont}>
-            {props.galleryArr.map(el => <Card
+            {props.favorites.map(el => <Card
                 img={el.image_url}
                 name={el.name}
                 abv={el.abv}
@@ -25,7 +27,8 @@ Favorite.defaultProps = {};
 
 function MSTP (state) {
     return {
-        galleryArr: state.galleryArr
+        gallery: state.gallery,
+        favorites: state.favorites,
     }
 }
 

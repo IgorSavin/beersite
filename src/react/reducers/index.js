@@ -1,10 +1,12 @@
 import {combineReducers} from 'redux';
 import {randomProduct} from './randomReducer';
-import galleryArr from './galleryReducer'
+import gallery from './galleryReducer';
+import favorites from './favoriteReducer';
 
 const rootReducer = combineReducers ({
     randomProduct,
-    galleryArr: galleryArr,
+    gallery: gallery,
+    favorites,
 });
 
 export default rootReducer;
