@@ -6,16 +6,7 @@
 }
 .items {
     list-style: none;
-    border: 2px solid green;
     position: relative;
-    /* overflow: scroll;
-    max-width: 400px;
-    height: 50px; */
-
-    /* display: flex;
-    justify-content: space-between; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
 }
 .delete {
     position: absolute;
