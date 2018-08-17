@@ -13,17 +13,18 @@ const Busket = (props) => {
             <h2 onClick={props.busketActive}>Title</h2>
             {/* {console.log(props.busket.id)} */}
                       
-            <ul className={styles.itemList}>
-
-            {props.isActiveBusket ? <li className={styles.items}>{props.busket.map(el => 
-            <Card name={el.name} img={el.img} price={el.price} count={el.count} key={el.id}/>)}</li> : null}
-                
             
 
-            <span onClick={() => props.addItem(props.beers, 81)}>{props.busketTotal}</span>
+            {props.isActiveBusket ? <ul className={styles.itemList}><li className={styles.items}>{props.busket.map(el => 
+            <Card name={el.name} img={el.img} price={el.price} count={el.count} key={el.id}/>)}</li> 
+                
+            
+            <span>Total : ${props.busketTotal}</span>
             <button className={styles.buttonBuy}>Buy</button>
             </ul>
-
+            
+            : null}
+    <button onClick={() => props.addItem(props.beers, 81)}>ADD</button>
         </div>
     );
 }
