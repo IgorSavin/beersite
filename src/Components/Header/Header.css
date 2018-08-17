@@ -1,0 +1,39 @@
+.container {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    background-color: #7e7e1e;
+    /* flex-wrap: wrap; */
+    border: 3px solid rgb(8, 1, 1);
+    height: 30rem;
+}
+.buy {
+    max-width: 500px;
+    /* max-width: 240px; */
+    background-color: #ffffff;
+}
+.resultsTotal {
+    display: flex;
+    justify-content: space-evenly   ; 
+    align-items: center;
+}
+.total {
+    font-size: 14px;
+    padding: 5px 20px;
+    flex-basis: 40%;
+    /* border: 1px solid #a22c4d; */
+}
+.buttonBuy {
+    font-size: 14px;
+    color: #a22c4d;
+    padding: 5px 20px;
+    border: 1px solid #a22c4d;
+    margin-right: 20px;
+    /* flex-basis: 20%; */
+}
+.busket {
+    padding: 10px 10px;
+    /* background-color: green; */
+    /* width: 220px; */
+    overflow: scroll;
+    height: 95px;
+}
