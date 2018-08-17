@@ -28,11 +28,13 @@ Header {
     left: 1rem;
     color: #fff;
     font-size: 1.25rem;
+    cursor: pointer;
 }
 
 .header__menu {
-    display: none;
     list-style: none;
+    display: inline-block;
+    width: 4.5rem;
     text-transform: uppercase;
 }
 

@@ -9,7 +9,7 @@ export function getRandomProduct(data) {
 
 function getRandom() {
     return axios.get('https://api.punkapi.com/v2/beers/random')
-        .then(result => {console.log(result.data[0]); return result})  // test
+        // .then(result => {console.log(result.data[0]); return result})  // test
         .then(result => result.status === 200 ? result : null)
         .catch(err => console.log(err))
 }
