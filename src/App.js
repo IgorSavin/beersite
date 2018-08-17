@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main'
 import {getRandomProductAsync} from './react/actions/randomActions';
+import {galleryAsync} from './react/actions/galleryActions'
 import './App.css';
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <Header/>
                 <Main/>
             </div>
         );
@@ -39,4 +41,3 @@ function MDTP (dispatch) {
 }
 
 export default connect(MSTP, MDTP) (App);
-

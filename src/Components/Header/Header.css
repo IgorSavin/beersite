@@ -4,17 +4,8 @@ Header {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    /*font-family: Roboto, sans-serif;*/
     font-weight: 300;
 
-}
-
-.header__container {
-    position: relative;
-    /*text-align: center;*/
-    min-width: 320px;
-    max-width: 1024px;
-    margin: auto;
 }
 
 .header__wrapper {
@@ -25,44 +16,161 @@ Header {
     background-image: url('./img/bg4.jpg');
 }
 
+.header__container {
+    margin: 0 0.75rem;
+}
+
+.header__menu-icon {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.header__menu {
+    display: none;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.header__menu-item {
+    font-size: 0.75rem;
+    color: #fff;
+    padding: 0.125rem 0;
+}
+
 .header__basketicon {
     position: absolute;
     top: 1rem;
-    right: 3rem;
-    font-size: 1.5rem;
+    right: 1.25rem;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.header__basketcount {
+    content: '1';
+    display: block;
+    width: 1.15rem;
+    height: 1.15rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #f60000;
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 800;
+    text-align: center;
+    position: absolute;
+    top: -0.45rem;
+    right: -0.65rem;
 }
 
 .slide {
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 .slide-inner {
+    display: none;
     width: 60%;
     padding-top: 8rem;
     font-family: 'Jura', sans-serif;
     font-weight: 300;
 }
 
-.slid-quote {
+.slide-quote {
     font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
 }
 
-.slid-quote-author {
+.slide-quote-author {
     font-size: 1rem;
 }
 
+.header__random-product {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 280px;
+
+    background-color: rgba(255,255,255,0.9);
+    -webkit-border-radius: 0.35rem;
+    -moz-border-radius: 0.35rem;
+    border-radius: 0.35rem;
+}
+
 @media (min-width: 768px) {
+    .header__container {
+        position: relative;
+        margin: 0 3rem;
+        padding-top: 1rem;
+    }
+
+    .header__menu-icon {
+        display: none;
+    }
+
+    .header__menu {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        max-width: 16rem;
+        margin: 0 auto 2rem;
+        text-transform: uppercase;
+    }
+
+    .header__menu-item {
+        font-size: 0.85rem;
+        color: #fff;
+    }
+
+    .header__basketicon {
+        right: 0.25rem;
+    }
+
+    .header__content {
+        display: flex;
+    }
+
+    .header__random-product {
+        position: static;
+        transform: translate(0, 0);
+    }
+
+    .slide-inner {
+        display: initial;
+    }
+
     .header__wrapper,
     .slide {
-        height: calc(100vh - 4rem);
+        /*height: calc(100vh - 4rem);*/
         color: #fff;
     }
 
     .slide-quote {
+        font-family: 'Jura', sans-serif;
+        font-weight: 300;
         font-size: 3rem;
+        line-height: 3.25rem;
+        padding-top: 4rem;
     }
 
     .slide-quote-author {
+        font-family: 'Jura', sans-serif;
+        font-weight: 300;
         font-size: 1.25rem;
+    }
+
+    .header__random-product {
+        /*width: 38%;*/
+        display: block;
+    }
+
+    .beerCard {
+        margin-bottom: 0;
     }
 }
