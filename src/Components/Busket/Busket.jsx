@@ -18,9 +18,10 @@ const Busket = (props) => {
             {props.isActiveBusket ? <ul className={styles.itemList}><li className={styles.items}>{props.busket.map(el => 
             <Card name={el.name} img={el.img} price={el.price} count={el.count} key={el.id}/>)}</li> 
                 
-            
-            <span>Total : ${props.busketTotal}</span>
-            <button className={styles.buttonBuy}>Buy</button>
+            <div className={styles.buys}>
+                <span className={styles.buttonBuy}>Total : ${props.busketTotal}</span>
+                <button className={styles.buttonBuy}>Buy</button>
+            </div>
             </ul>
             
             : null}

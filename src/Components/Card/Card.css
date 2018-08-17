@@ -7,11 +7,31 @@
 .items {
     list-style: none;
     position: relative;
+    /* border: 4px solid red; */
+    /* box-shadow: 0 0 5px rgba(155, 6, 6, 0.5);  */
+}
+.cartBtn {
+    color: #921e2d;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #c7c7c3;
+    padding: 5px 15px;
+    border-radius: 6px
+}
+.cartBtn:hover {
+    background-color: #921e2d;
+    color: #fff;
 }
 .delete {
     position: absolute;
-    right: 0;
+    right: 5px;
     top: 0;
+    cursor: pointer;
+    color: red;
 }
 .name {
     margin-left: 1.5rem;
@@ -24,9 +44,24 @@
 
 .second {
     margin-top: 5px;
-    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    /* width: 200px; */
     /* margin-left: 3.5rem; */
     margin-bottom: 20px;
+}
+.items::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    /* background-color: red; */
+    box-shadow: 0 0 5px rgba(155, 6, 6, 0.5); 
+
+}
+.count {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 /* .name {
     flex-basis: 80%;

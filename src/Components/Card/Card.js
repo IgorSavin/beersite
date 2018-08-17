@@ -13,14 +13,14 @@ const Card = ({name, img, price, count, countUnAdd, countAdd, priceBusket, price
             {/* {priceBusket(price, count)} */}
             {/* {totals(priceBuskets)} */}
         <div className={styles.first}>
-        <button onClick={() => countDelete(81)} className={styles.delete}>Dell</button> 
+        <span onClick={() => countDelete(81)} className={styles.delete}>&times;</span> 
             <img src={img} className={styles.img}/>
             <span className={styles.name}>{name}</span>
         </div>
         <div className={styles.second}>
-            <button onClick={() => countUnAdd(81)}>-</button>
-            <span>{count}</span>
-            <button onClick={() => countAdd(81)}>+</button>
+            <button onClick={() => countUnAdd(81)} className={styles.cartBtn}>-</button>
+            <span className={styles.count}>{count}</span>
+            <button onClick={() => countAdd(81)} className={styles.cartBtn}>+</button>
             {/* <p className={styles.price}>Price : ${busketTotal}</p> */}
          </div>   
         </div>

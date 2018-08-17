@@ -1,7 +1,4 @@
-.buttonBuy {
-    position: absolute;
-    right: 0;
-}
+
 
 .items{
     max-width: 400px;
@@ -15,4 +12,30 @@
 .position {
     max-width: 400px;
     position: relative;
+}
+.buttonBuy {
+    color: #921e2d;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #c7c7c3;
+    padding: 5px 30px;
+    border-radius: 6px
+}
+
+.buttonBuy:hover {
+    background-color: #921e2d;
+    color: #fff;
+}
+.buys{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.itemList {
+    /* border: 2px solid red; */
+
 }
