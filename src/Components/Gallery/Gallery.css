@@ -1,0 +1,6 @@
+.cardCont {
+    /* flex-basis: 21%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

@@ -9,33 +9,34 @@ class App extends Component {
 
     componentDidMount() {
         this.props.getRandomProd();
+        this.props.galleryFetch();
     };
 
     render() {
         return (
             <div className="App">
-                <Header/>
                 <Main/>
             </div>
         );
     }
 }
 
-
-// MSTP
-function mapStateToProps(state) {
+function MSTP(state) {
     return {
         randomProduct: state.randomProduct,
     }
 }
 
-// MDTP
-function mapDispatchToProps(dispatch) {
+function MDTP (dispatch) {
     return {
         getRandomProd: function() {
             dispatch(getRandomProductAsync())
         },
+        galleryFetch: function() {
+            dispatch(galleryAsync())
+        }
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(MSTP, MDTP) (App);
+

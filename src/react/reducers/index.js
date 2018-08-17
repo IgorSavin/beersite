@@ -3,6 +3,7 @@ import {randomProduct} from './randomReducer';
 
 const rootReducer = combineReducers ({
     randomProduct,
+    galleryArr: galleryArr,
 });
 
 export default rootReducer;
