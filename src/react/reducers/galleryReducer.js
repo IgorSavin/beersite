@@ -28,6 +28,8 @@ export default function gallery (state = [], action) {
         case 'FILTER_DATA':
             const result = action.dataArr.filter( el => el.srm > action.firstParam && el.srm < action.secondParam ? el : null );
             return state= [...result];
+        case ('FOODAPIREADY'):
+            return [...action.data];
 
             
 

@@ -1,0 +1,185 @@
+.beerPage__container {
+    background-color: #e3e3e3;
+    background-size: cover;
+    background-position: center;
+    padding: 1.5rem;
+}
+
+.beerPage {
+    margin: auto;
+    padding: 2rem;
+    background-color: #fff;
+    width: 80%;
+    box-shadow: 7px 0px 40px -8px rgba(112,111,111,1);
+    border-radius: 8px;
+}
+.beerPage__infoBox {
+    margin-bottom: 1rem;
+}
+.beerPage__name {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.beerPage__year {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.beerPage__year:after {
+    content: '';
+    display: block;
+    margin: 0.8rem auto 0;
+    width: 20%;
+    height: 0.1rem;
+    background-color: #484848;
+}
+
+.beerPage__descr {
+    font-size: 0.9rem;
+}
+
+.beerPage__descr:after {
+    content: '';
+    display: block;
+    margin: 1rem auto 0;
+    width: 70%;
+    height: 1px;
+    background-color: #484848;
+}
+
+.beerPage__dishesHeader {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.beerPage__dishes {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+    list-style: outside;
+    text-align: left;
+    border-bottom: 1px solid #484848;
+}
+
+.beerPage__dish {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+}
+
+.beerPage__progressBar {
+    margin-bottom: 2rem;
+}
+
+.beerPage__progressBarBG {
+    background-color: #e1e1e1;
+    border-radius: 5px;
+}
+.beerPage__Value {
+    margin: 0;
+    position: relative;
+    height: 2.7rem;
+    display: block;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    text-align: left;
+    padding-left: 0.5rem;
+    border-radius: 5px;
+}
+.beerPage__progressBar__text {
+    position: absolute;
+    top: 6px;
+    width: 20rem;
+}
+
+.beerPage__abvValue {
+    background-color: #FF5252;
+    margin-bottom: 0.2rem;
+}
+
+.beerPage__ibuValue {
+    background-color: #FFA000;
+    margin-bottom: 0.2rem;
+}
+
+.beerPage__srmValue {
+    background-color: #FFECB3;
+}
+
+.beerPage__img {
+    display: block;
+    margin: 0 auto 2rem;
+    max-width: 5rem;
+    height: auto;
+}
+.beerPage__price {
+    color: #921e2d;
+    font-size: 1.7rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 2rem;
+}
+.beerPage__btn {
+    color: #921e2d;
+    font-weight: 600;
+    font-size: 17px;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #c7c7c3;
+    padding: 17px;
+    border-radius: 6px;
+}
+
+.beerPage__btn:hover {
+    background-color: #921e2d;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .beerPage__container {
+        height: 95vh;
+    }
+    .beerPage {
+        display: flex;
+    }
+    .beerPage__infoBox {
+        flex-basis: 60%;
+    }
+    .beerPage__pictureBox {
+        flex-basis: 40%;
+        margin: auto 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .beerPage__img {
+        max-width: 7rem;
+    }
+    .beerPage__infoBox {
+        vertical-align: top;
+    }
+    .beerPage__name {
+        font-size: 2.3rem;
+    }
+    .beerPage__descr {
+        font-size: 1.3rem;
+    }
+    .beerPage__dishesHeader {
+        font-size: 1.7rem;
+    }
+    .beerPage__dish {
+        font-size: 1.2rem;
+    }
+    .beerPage__btn {
+        font-size: 1.4rem;
+    }
+}
+
+

@@ -1,0 +1,48 @@
+.foodFrom {
+
+}
+
+.foodFrom__form {
+    display: flex;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+.foodFrom__input {
+    padding-left: 0.5rem;
+    margin-right: 0.7rem;
+    font-size: 1.3rem;
+    color: #921e2d;
+    border: 1px solid #921e2d;
+    border-radius: 3px;
+}
+
+.foodFrom__input:focus {
+    outline: 3px solid rgba(146, 30, 45, 0.4);
+    background-color: #fff;
+    border: 1px solid #921e2d;
+    border-radius: 3px;
+}
+.foodFrom__input::placeholder {
+    color: rgba(146, 30, 45, 0.8);
+}
+
+.foodFrom__btn {
+    /*background-image: url('./magnifier.png');*/
+    /*background-size: contain;*/
+    color: #921e2d;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #c7c7c3;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+}
+
+.foodFrom__btn:hover {
+    background-color: #921e2d;
+    color: #fff;
+}
