@@ -1,17 +1,23 @@
 
-
+.rotman {
+    display: block;
+    transition: 3s;
+}
 .items{
-    max-width: 400px;
+    /* max-width: 400px; */
     overflow: scroll;
     height: 165px;
     /* background-color: red; */
     box-shadow: 0 0 10px rgba(0,0,0,0.5); 
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    padding: 1.6rem;
+    margin-bottom: 1rem;
+
 }
 
 .position {
-    max-width: 400px;
-    position: relative;
+    /* max-width: 400px; */
+    /* position: relative; */
 }
 .buttonBuy {
     color: #921e2d;
@@ -22,20 +28,41 @@
     outline: none;
     cursor: pointer;
     border: 1px solid #c7c7c3;
-    padding: 5px 30px;
-    border-radius: 6px
+    padding: 0.29411765rem 1.76470588rem;
+    border-radius: 0.352294118rem;
+    display: block;
+    width: 87%;
+    text-align: center;
 }
 
 .buttonBuy:hover {
     background-color: #921e2d;
     color: #fff;
 }
-.buys{
+/* .buys{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-.itemList {
-    /* border: 2px solid red; */
+    /* align-items: center; */
 
+.container {
+    /* border: 2px solid red; */
+    /* display: block; */
+    max-width: 500px;
+
+}
+
+@media screen and (min-width: 800px) {
+    .container {
+        max-width: 900px;
+    }
+    .items{
+        padding-right: 1.9rem;
+  }
+  .buttonBuy {
+    font-size: 35px;
+    width: 93.5%;
+  }
+  .items{
+    height: 185px;
+  }
 }
