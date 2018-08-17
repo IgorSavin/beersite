@@ -1,11 +1,13 @@
-import axios from 'axios';
-const galleryHandler =(arr)=>({type: 'GALLERY', payload: arr});
+import axios from "axios";
 
-const END_POINT = 'https://api.punkapi.com/v2/beers?';
-const getGallery=()=>axios.get(`${END_POINT}page=2&per_page=80`).then(data=>data.status === 200? data.data: null).catch(error=>console.log('error text: ',error));
+export const galleryHandler = (data) => ({
+    type: 'GALLERY_FETCH',
+    data
+})
 
-export const getGalleryAsync=()=> dispatch=>{
-    getGallery().then(data=>dispatch(galleryHandler(data)));
-};
+const url = `https://api.punkapi.com/v2/beers?page=2&per_page=12`
 
-export const getFilterBeer =(first,second)=> ({ type:"FILTER_BEER", firstParam:first, secondParam:second});
+export const galleryAsync = () => dispatch => {
+    return axios.get(`${url}`)
+        .then(result => dispatch(galleryHandler(result.data)))
+}

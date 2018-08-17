@@ -1,8 +1,11 @@
+.wrapper {
+    background-color: #eeeeec;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
-    background-color: #eeeeec;
-    flex-wrap: wrap;
-    border: 3px solid red;
-    height: 30rem;
+    /* flex-wrap: wrap; */
+    min-width: 320px;
+    max-width: 1200px;
 }

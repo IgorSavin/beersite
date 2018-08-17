@@ -1,12 +1,16 @@
 import React from 'react';
-// import './Main.css'
-import style from './Main.css';
+import './Main.css'
+import Gallery from '../Gallery/Gallery'
+
 
 const Main = () => {
     return (
-        <div className={style.container}>
-
+        <div className="wrapper">
+            <div className='container'>
+                <Gallery/>
+            </div>
         </div>
+
     );
 };
 

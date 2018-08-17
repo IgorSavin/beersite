@@ -2,14 +2,15 @@ import React, {Component} from 'react';
 import Main from './Components/Main/Main';
 import Header from './Components/Header/Header';
 import {connect}  from 'react-redux';
-import  { getGalleryAsync } from './react/actions/galleryActions'
+import  { galleryAsync } from './react/actions/galleryActions'
 import './App.css';
 
 class App extends Component {
 
     componentDidMount() {
-        this.props.fetchGallery();
+        this.props.galleryFetch()
     }
+
     render() {
         return (
             <div className="App">
@@ -20,10 +21,10 @@ class App extends Component {
     }
 }
 
-function MDTP(dispatch) {
+function MDTP (dispatch) {
     return {
-        fetchGallery: function() {
-            dispatch(getGalleryAsync())
+        galleryFetch: function() {
+            dispatch(galleryAsync())
         }
     }
 }

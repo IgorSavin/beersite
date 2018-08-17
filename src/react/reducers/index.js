@@ -4,11 +4,12 @@ import isActiveBusket from '../reducers/isActiveReducers';
 import gallery from './galleryReducer'
 import priceBusket from './priceBusketReducer';
 import totalBusket from './totalBusketReducer';
+import galleryArr from './galleryReducer'
 
 const rootReducer = combineReducers ({
     busket,
     isActiveBusket: isActiveBusket,
-    gallery,
+    gallery: galleryArr,
     priceBusket,
     // totalBusket,
 });
