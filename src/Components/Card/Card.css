@@ -1,0 +1,40 @@
+.img {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    width: 50px;
+    height: 100px;
+}
+.items {
+    list-style: none;
+    border: 2px solid green;
+    /* overflow: scroll;
+    max-width: 400px;
+    height: 50px; */
+
+    /* display: flex;
+    justify-content: space-between; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+.name {
+    margin-left: 1.5rem;
+}
+.first, .second {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price {
+    flex-basis: 70%;
+    /* align-items: center; */
+}
+.second {
+    text-align: center;
+    margin-left: 3.5rem;
+}
+/* .name {
+    flex-basis: 80%;
+}
+.wrap {
+    flex-basis: 30%;
+} */

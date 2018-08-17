@@ -1,43 +1,57 @@
 /*eslint-disable*/
-
 import React from 'react';
-import styles from './Busket.css';
 import { connect } from 'react-redux';
+import styles from './Busket.css';
+import {addToBasket, price, countDelete} from '../../react/actions/busketActions';
+import Card from '../Card/Card';
+import {busketActive} from '../../react/actions/isActiveAction';
 
-const Busket = ({massItems, name, props, price, img}) => {
+const Busket = (props) => {
     return (
-        
         <div>
-        {console.log(props)}    
-        
+            <h2 onClick={props.busketActive}>Title</h2>
+            {/* {console.log(props.busket.id)} */}
            
-                    <div className={styles.items}>
-                        <img src={img} alt="" className={styles.imageSize}/>
-                    <div className={styles.text}>
-                        <span className={styles.title}>{name}</span>
-                            <div className={styles.click}>
-                                <button className={styles.add}>+</button>
-                                <span className={styles.value}>3</span>
-                                <button className={styles.unAdd}>-</button>
-                                </div>
-                        <span className={styles.price}>Price : ${price}</span>
-                        </div>
-                    </div>
-            
-            
+            <ul>
+
+            <li className={styles.items}>{props.isActiveBusket ? props.busket.map(el => <Card name={el.name} img={el.img} price={el.price} count={el.count}/>) : null}</li>
+                
             
 
-    
-    
-   
-    </div>
+            <span onClick={() => props.addItem(props.beers, 81)}>Total</span>
+            <button onClick={() => props.countDelete(81)}>Dell</button>
+            </ul>
+
+        </div>
     );
 }
 
-function mSTP (store) {
+function MSTP (state) {
     return {
-        massItems: store.massItems,
+        beers: state.gallery,
+        busket: state.busket,
+        isActiveBusket: state.isActiveBusket,
     }
 }
 
-export default connect(mSTP, null)(Busket);
+function MDTP (dispatch) {
+    return {
+        addItem : function(arr, id) {
+            dispatch(addToBasket(arr, id))
+        },
+        
+        price: function (id) {
+            dispatch(price(id))
+        },
+        countDelete : function(id) {
+            dispatch(countDelete(id))
+        },
+        
+
+        busketActive: function () {
+            dispatch(busketActive())
+        }
+    }
+}
+
+export default connect(MSTP, MDTP)(Busket)
