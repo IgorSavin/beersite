@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { inpChange } from '../../react/actions/foodFormActions';
 import { foodAPIAsync } from '../../react/actions/foodFilterActions';
+import {getGalleryAsync} from '../../react/actions/galleryActions';
+
 import styles from './FoodForm.css';
 
 // import PropTypes from 'prop-types';
@@ -9,7 +11,13 @@ import styles from './FoodForm.css';
 function FoodForm(props) {
 
     function changingInput(e) {
-        props.setData(e.target.value);
+        if (e.target.value !== '') {
+            props.setData(e.target.value)
+        } else {
+            props.setData(e.target.value)
+            props.galleryFetch();
+        }
+
     }
 
 
@@ -19,7 +27,7 @@ function FoodForm(props) {
         if (!reg.test(props.inpData) && props.inpData !=='') {
             props.foodRequest(props.inpData);
         } else {
-            return;
+            props.galleryFetch();
         }
     }
 
@@ -47,6 +55,9 @@ function MDTP(dispatch) {
         },
         foodRequest: function (value) {
             dispatch(foodAPIAsync(value))
+        },
+        galleryFetch: function() {
+            dispatch(getGalleryAsync())
         },
     }
 }
