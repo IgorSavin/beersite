@@ -1,10 +1,13 @@
 .sortBtnCont {
-    /* flex-basis: 30%; */
-    width: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
+     flex-basis: 10%;
+    margin-top: 3.59%;
     left: 8px;
+    background-color: #fff;
+    -webkit-box-shadow: 7px 0px 40px -8px rgba(112,111,111,1);
+    -moz-box-shadow: 7px 0px 40px -8px rgba(112,111,111,1);
+    box-shadow: 7px 0px 40px -8px rgba(112,111,111,1);
+    padding: 8px;
+    position: fixed;
 }
 
 .sortBy {
@@ -12,21 +15,23 @@
     font-weight: 600;
     font-size: 17px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .sortBtn {
-    flex-basis: 60%;
+    /*flex-basis: 60%;*/
+    display: block;
     margin-bottom: 15px;
     color: #921e2d;
     font-weight: 600;
     font-size: 16px;
     background-color: #fff;
-    border: none;
     outline: none;
     cursor: pointer;
     border: 1px solid #c7c7c3;
     padding: 10px;
-    border-radius: 6px
+    border-radius: 6px;
+    width: 100%;
 }
 
 .sortBtn:hover {

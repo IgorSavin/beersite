@@ -1,13 +1,19 @@
 import React from 'react';
-import './Main.css'
-import Gallery from '../Gallery/Gallery'
+import style from './Main.css'
+import Gallery from '../Gallery/Gallery';
+import BeerFilter from '../Filters/Filters';
+import Sort from '../Sort/Sort'
 
 
 const Main = () => {
     return (
-        <div className="wrapper">
-            <div className='container'>
-                <Gallery/>
+        <div className={style.wrapper}>
+            <div className={style.container}>
+
+            <div className={style.content}>
+               <Sort/>
+               <Gallery/>
+            </div> 
             </div>
         </div>
 

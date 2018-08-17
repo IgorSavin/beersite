@@ -3,9 +3,16 @@
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
+    /*display: flex;*/
+    /*justify-content: space-between;*/
     /* flex-wrap: wrap; */
     min-width: 320px;
     max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
 }

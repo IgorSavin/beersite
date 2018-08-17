@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import galleryArr from './galleryReducer'
-
+import gallery from './galleryReducer'
+import filterData from './filterDataReducer'
 
 
 const rootReducer = combineReducers ({
-    galleryArr: galleryArr,
+    gallery, filterData,
 });
 
 export default rootReducer;

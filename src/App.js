@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux'
-import {galleryAsync} from './react/actions/galleryActions'
-import Main from './Components/Main/Main'
+import {connect} from 'react-redux';
+import {getGalleryAsync} from './react/actions/galleryActions';
+import Main from './Components/Main/Main';
+// import {filterData} from '../../react/actions/filterDataActions';
 import './App.css';
 
 class App extends Component {
 
     componentDidMount() {
-        this.props.galleryFetch()
+        this.props.galleryFetch();
+        // this.props.getFilterBeer();
     }
 
     render() {
@@ -22,8 +24,12 @@ class App extends Component {
 function MDTP (dispatch) {
     return {
         galleryFetch: function() {
-            dispatch(galleryAsync())
-        }
+            dispatch(getGalleryAsync())
+        },
+        // getFilterBeer: function(arr, first,second) {
+        //     dispatch(filterData(arr, first,second))
+        // },
+
     }
 }
 

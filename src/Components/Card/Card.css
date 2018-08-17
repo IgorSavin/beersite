@@ -4,13 +4,14 @@
     padding-top: 24px;
     position: relative;
     /* background-color: #fff; */
-    border-radius: 6px;
+    /*border-radius: 6px;*/
     /* border: 1px solid #bbb; */
     /* box-shadow: 0 0 6px 5px rgba(14, 14, 14, 0.5); */
     -webkit-box-shadow: 7px 0px 40px -8px rgba(112,111,111,1);
     -moz-box-shadow: 7px 0px 40px -8px rgba(112,111,111,1);
     box-shadow: 7px 0px 40px -8px rgba(112,111,111,1);
     margin-bottom: 40px;
+    background-color: #fff;
 }
 
 .beerCard:last-child {
@@ -29,8 +30,8 @@
     top: 0;
     left: 0;
     transition: 1s;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    /*border-top-left-radius: 6px;*/
+    /*border-top-right-radius: 6px;*/
     overflow: hidden;
 }
 
@@ -54,7 +55,7 @@
 .name {
     color: #2c2c26;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     /* background-color: #fff; */
     flex-basis: 100%;
     margin-bottom: 12px;
@@ -99,7 +100,6 @@
     font-weight: 600;
     font-size: 17px;
     background-color: #fff;
-    border: none;
     outline: none;
     cursor: pointer;
     border: 1px solid #c7c7c3;
@@ -131,7 +131,7 @@
     color: #FFF;
     padding: 20px;
     top: 10px;
-    font-size: 17px;
+    font-size: 15px;
     position: relative;
 }
 

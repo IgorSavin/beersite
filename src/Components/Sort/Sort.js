@@ -6,7 +6,7 @@ import {sortByAbv, sortByIbu, sortByEbc, sortByPrice, resetSort} from '../../rea
 const Sort = (props) => {
     return (
         <div className={styles.sortBtnCont}>
-            <p className={styles.sortBy}>Sort by:</p>
+            <p className={styles.sortBy}>Sort by :</p>
             <button className={styles.sortBtn} 
                     onClick={props.sortByAbv}>ABV</button>
             
