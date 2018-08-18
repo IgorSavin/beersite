@@ -7,9 +7,9 @@ import FoodForm from '../../Components/FoodForm/FoodForm';
 const Sort = (props) => {
     return (
         <div className={styles.sortBtnCont}>
-            <p className={styles.sortBy}>Search by food:</p>
+            <p className={styles.sortBy}>Tell us what you're eating to get your perfect beer</p>
             <FoodForm/>
-            <p className={styles.sortBy}>Sort by:</p>
+            <p className={styles.sortBy}>Sort beer by:</p>
             <button className={styles.sortBtn} 
                     onClick={props.sortByAbv}>ABV</button>
             

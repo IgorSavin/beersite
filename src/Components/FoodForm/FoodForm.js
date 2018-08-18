@@ -35,8 +35,8 @@ function FoodForm(props) {
         <div className={styles.foodFrom}>
             <form className={styles.foodFrom__form} onSubmit={foodSearch}>
                 <input className={styles.foodFrom__input} type="text" name="foodInput" id="foodInput"
-                       placeholder='enter food' value={props.inpData} onChange={changingInput} />
-                <input className={styles.foodFrom__btn} type="submit" name="foodSubmit" id="foodSubmit" value='go'/>
+                       placeholder='I am eating' value={props.inpData} onChange={changingInput} />
+                <input className={styles.foodFrom__btn} type="submit" name="foodSubmit" id="foodSubmit" value='Find me a beer'/>
             </form>
         </div>
     );
