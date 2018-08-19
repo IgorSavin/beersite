@@ -20,14 +20,11 @@
 /* } */ 
 
 .aside {
-    /* display:  */
     width: 100%;
-    /* background-color: var(--serch); */
     box-shadow: 0.625rem 0 0.625rem 0 rgba(0, 0, 0, 0.15);
-    /* font-family: var(--family); */
     position: absolute;
-    /* top: 0; */
-    left: 0;
+    top: 0;
+    right: 0;
     min-height: 100%;
     transition: 1s;
     transform: rotate(1turn);
@@ -37,8 +34,10 @@
 
 .asideShow {
     position: absolute;
+    transition: 1s;
+    width: 100%;
     top: -50rem;
-    left: -60rem;
+    right: -60rem;
 }
 
 .items{
