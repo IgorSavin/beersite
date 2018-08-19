@@ -8,14 +8,14 @@ import {busketActive} from '../../react/actions/isActiveAction';
 import {totalBusketSelectors} from '../../react/selectors/busketSelectors';
 
 const Busket = (props) => {
+    // let classReact = React.createClass({color: 'white'})
     return (
         <div className={styles.position}>
-            <h2 onClick={props.busketActive} className={styles.rotman}>Title</h2>
-            {/* {console.log(props.busket.id)} */}
+            <button onClick={props.busketActive} className={styles.rotman}>Title</button>
                       
             
             <div className={styles.container}>
-            {props.isActiveBusket ? <ul className={styles.itemList}><li className={styles.items}>{props.busket.map(el => 
+             <ul className={props.isActiveBusket ? styles.aside  : styles.asideShow}><li className={styles.items}>{props.busket.map(el => 
             <Card name={el.name} img={el.img} price={el.price} count={el.count} key={el.id}/>)}</li> 
                 
             {/* <div className={styles.buys}> */}
@@ -24,9 +24,9 @@ const Busket = (props) => {
             {/* </div> */}
             </ul>
             
-            : null}
+            
             </div>
-    <button onClick={() => props.addItem(props.beers, 81)}>ADD</button>
+             <button onClick={() => props.addItem(props.beers, 81)}>ADD</button>
         </div>
     );
 }

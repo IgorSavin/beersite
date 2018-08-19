@@ -10,8 +10,6 @@ import {priceBusket} from '../../react/actions/priceBusketAction';
 const Card = ({name, img, price, count, countUnAdd, countAdd, priceBusket, priceBuskets, totalPriceBusket, countDelete}) => {
     return (
         <div className={styles.items}>
-            {/* {priceBusket(price, count)} */}
-            {/* {totals(priceBuskets)} */}
         <div className={styles.first}>
         <span onClick={() => countDelete(81)} className={styles.delete}>&times;</span> 
             <img src={img} className={styles.img}/>

@@ -1,24 +1,55 @@
 
-.rotman {
+/* .rotman {
     display: block;
-    transition: 3s;
+    transition: 0.8s;
+} */
+/* .test {
+    color: yellowgreen;
+    /* transition: 3s; */
+
+/* .show {
+    display: block;
+    transition: 4s;
+    background-color: gray;
+    position: absolute;
+    left: 90px;
+} */
+/* .unshow {
+    /* display: none; */
+    /* width: 100px; */
+/* } */ 
+
+.aside {
+    /* display:  */
+    width: 100%;
+    /* background-color: var(--serch); */
+    box-shadow: 0.625rem 0 0.625rem 0 rgba(0, 0, 0, 0.15);
+    /* font-family: var(--family); */
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    min-height: 100%;
+    transition: 1s;
+    transform: rotate(1turn);
+    z-index: 2;
+    padding-top: 1.5rem;
 }
+
+.asideShow {
+    position: absolute;
+    top: -50rem;
+    left: -60rem;
+}
+
 .items{
-    /* max-width: 400px; */
     overflow: scroll;
     height: 165px;
-    /* background-color: red; */
     box-shadow: 0 0 10px rgba(0,0,0,0.5); 
-    /* margin-bottom: 20px; */
     padding: 1.6rem;
     margin-bottom: 1rem;
 
 }
 
-.position {
-    /* max-width: 400px; */
-    /* position: relative; */
-}
 .buttonBuy {
     color: #921e2d;
     font-weight: 600;
@@ -38,18 +69,20 @@
 .buttonBuy:hover {
     background-color: #921e2d;
     color: #fff;
+    transition: 1.5s;
 }
-/* .buys{
-    display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
-
-.container {
-    /* border: 2px solid red; */
-    /* display: block; */
+.container{
     max-width: 500px;
-
+    position: relative;
 }
+/* .container {
+    max-width: 500px;
+    transition-duration: 3s;
+
+    /* position: relative; */
+    /* display: block; */
+    /* transition: 4s; */
+/* }  */
 
 @media screen and (min-width: 800px) {
     .container {

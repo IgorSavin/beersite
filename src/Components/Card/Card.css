@@ -8,8 +8,6 @@
     list-style: none;
     position: relative;
     margin-bottom: 1.25rem;
-    /* border: 4px solid red; */
-    /* box-shadow: 0 0 5px rgba(155, 6, 6, 0.5);  */
 }
 .cartBtn {
     color: #921e2d;
@@ -47,16 +45,13 @@
     margin-top: 0.0625rem;
     display: flex;
     justify-content: flex-end;
-    /* width: 200px; */
-    /* margin-left: 3.5rem; */
 }
 .items::after {
     content: '';
     display: block;
     width: 100%;
     height: 3px;
-    /* background-color: red; */
-    box-shadow: 0 0 5px rgba(155, 6, 6, 0.5); 
+    /* box-shadow: 0 0 5px rgba(155, 6, 6, 0.5);  */
     margin-top: 1.25rem;
 
 }
@@ -85,7 +80,7 @@
         height: 150px;
     }
     .second {
-        margin: 0;
+        margin: -15px;
     }
 }
 /* .name {
