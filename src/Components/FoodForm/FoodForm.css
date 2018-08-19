@@ -2,19 +2,24 @@
 
 }
 
+.foodFrom p {
+    font-weight: 700;
+    text-align: center;
+}
+
 .foodFrom__form {
     display: flex;
-    padding: 0 1rem;
-    margin-bottom: 2rem;
+    justify-content: space-around;
+    margin-top: 0.5rem;
 }
 
 .foodFrom__input {
     padding-left: 0.5rem;
-    margin-right: 0.7rem;
     font-size: 1.3rem;
     color: #921e2d;
     border: 1px solid #921e2d;
     border-radius: 3px;
+    width: 55%;
 }
 
 .foodFrom__input:focus {
@@ -33,13 +38,14 @@
     color: #921e2d;
     font-weight: 600;
     font-size: 1.3rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     background-color: #fff;
     outline: none;
     cursor: pointer;
     border: 1px solid #c7c7c3;
     padding: 0.3rem 0.6rem;
     border-radius: 6px;
+    width: 38%;
 }
 
 .foodFrom__btn:hover {

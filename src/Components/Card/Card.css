@@ -3,10 +3,6 @@
     padding: 13px;
     padding-top: 24px;
     position: relative;
-    /* background-color: #fff; */
-    /*border-radius: 6px;*/
-    /* border: 1px solid #bbb; */
-    /* box-shadow: 0 0 6px 5px rgba(14, 14, 14, 0.5); */
     -webkit-box-shadow: 7px 0px 40px -8px rgba(112,111,111,1);
     -moz-box-shadow: 7px 0px 40px -8px rgba(112,111,111,1);
     box-shadow: 7px 0px 40px -8px rgba(112,111,111,1);
@@ -59,6 +55,8 @@
     /* background-color: #fff; */
     flex-basis: 100%;
     margin-bottom: 12px;
+    display: block;
+    min-height: 40px;
 }
 
 .abv {
@@ -78,7 +76,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* background-color: #fff; */
+    flex-direction: column-reverse
 }
 
 .moreBtn {
@@ -89,6 +87,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    align-self: flex-end;
 }
 
 .moreBtn:hover {
@@ -104,7 +103,8 @@
     cursor: pointer;
     border: 1px solid #c7c7c3;
     padding: 17px;
-    border-radius: 6px
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
 }
 
 .cartBtn:hover {

@@ -10,7 +10,8 @@
 /* .galleryCont {
     display: flex;
 } */
-
-.gallery__body {
-    /*flex-basis: 85%;*/
+@media(min-width: 768px) {
+    .gallery__body {
+        flex-basis: 85%;
+    }
 }

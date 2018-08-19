@@ -2,13 +2,10 @@ import React from 'react';
 import styles from './Sort.css';
 import {connect} from 'react-redux';
 import {sortByAbv, sortByIbu, sortByEbc, sortByPrice, resetSort} from '../../react/actions/sortActions';
-import FoodForm from '../../Components/FoodForm/FoodForm';
 
 const Sort = (props) => {
     return (
         <div className={styles.sortBtnCont}>
-            <p className={styles.sortBy}>Tell us what you're eating to get your perfect beer</p>
-            <FoodForm/>
             <p className={styles.sortBy}>Sort beer by:</p>
             <button className={styles.sortBtn} 
                     onClick={props.sortByAbv}>ABV</button>

@@ -2,7 +2,8 @@ import React from 'react';
 import Card from '../Card/Card'
 import {connect} from 'react-redux'
 import BeerFilter from '../Filters/Filters';
-import styles from './Gallery.css'
+import FoodForm from '../FoodForm/FoodForm';
+import styles from './Gallery.css';
 
 // import {galleryAsync} from '../../react/actions/galleryActions'
 
@@ -11,6 +12,7 @@ const Gallery = (props) => {
         // <div className={styles.gslleryCont}>
         <div className={styles.gallery__body}>
             <BeerFilter/>
+            <FoodForm/>
             <div className={styles.cardCont}>
                 {props.galleryArr.map(el => <Card
                     img={el.image_url}

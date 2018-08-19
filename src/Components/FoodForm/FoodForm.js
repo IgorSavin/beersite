@@ -33,10 +33,11 @@ function FoodForm(props) {
 
     return (
         <div className={styles.foodFrom}>
+        <p className={styles.sortBy}>Tell us what you're eating to get your perfect beer</p>
             <form className={styles.foodFrom__form} onSubmit={foodSearch}>
                 <input className={styles.foodFrom__input} type="text" name="foodInput" id="foodInput"
                        placeholder='I am eating' value={props.inpData} onChange={changingInput} />
-                <input className={styles.foodFrom__btn} type="submit" name="foodSubmit" id="foodSubmit" value='Find me a beer'/>
+                <input className={styles.foodFrom__btn} type="submit" name="foodSubmit" id="foodSubmit" value='Find beer'/>
             </form>
         </div>
     );

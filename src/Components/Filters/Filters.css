@@ -5,40 +5,29 @@
 }
 
 .beer_menu {
-    display: flex;
-    align-items: center;
-    width: 94%;
-    padding: 1.5rem 1rem;
     background-color: #fff;
-    margin: auto;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
 }
 
 .beer_menu__buttons {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 100%;
     list-style: none;
-    justify-content: space-around;
-    margin-left: 2rem;
-
 }
 
 .beer_menu__button {
     font-family: 'Roboto', sans-serif;
     position: relative;
-    display: flex;
-    align-items: center;
     color: #2c2c26;
     background-color: #fff;
     font-size: 0.875rem;
     font-weight: 900;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 1rem;
-    margin-right: 2rem;
-    padding: 0.5rem 2rem;
     transition: 1s;
-    /*border-bottom: 0.225rem solid  transparent;*/
+    /* border-bottom: 0.125rem solid  transparent; */
+    margin: 0 auto 0.5rem;
+    padding: 0.065rem 0;
+    width: 73%;
 }
 
 .beer_menu__button:last-child {
@@ -48,8 +37,7 @@
 .beer_menu__button:hover {
     color: #921e2d;
     cursor: pointer;
-    align-items: center;
-    /*border-bottom: 0.225rem solid  #921e2d;*/
+    /* border-bottom: 0.125rem solid  #921e2d; */
 }
 
 .img {
@@ -60,72 +48,39 @@
     /*color: green;*/
 /*}*/
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     .beer_menu__buttons {
-        justify-content: center;
-        margin: 0;
-    }
-
-    .beer_menu__button:last-child {
-        margin-right: 0;
+        display: flex;
+        align-items: center;
     }
 
     .beer_menu__button {
-        padding: 0 2rem 0 0;
-        margin-right: 0;
         margin-bottom: 0;
     }
+}
 
-    /*.beer_menu__button::before,*/
-    /*.beer_menu__button::after {*/
-        /*content: "";*/
-        /*flex-basis: 100%;*/
-        /*box-sizing: border-box;*/
-        /*display: block;*/
-        /*position: relative;*/
-        /*top: -48px;*/
-        /*border: 10px solid green;*/
-        /*border-top-width: 0;*/
-    /*}*/
-    /*.beer_menu__button::before {*/
-        /*left: 0;*/
-        /*border-bottom-color: red;*/
-        /*border-left-width: 0 ;*/
-    /*}*/
-    /*.beer_menu__button::after {*/
-        /*right: 0;*/
-        /*border-bottom-color: red;*/
-        /*border-right-width: 0 ;*/
-    /*}*/
-
-    /*.beer_menu__button::before {*/
-        /*display: block;*/
-        /*position: relative;*/
-        /*top: 0;*/
-        /*left: 0;*/
-        /*content: '';*/
-        /*height: 4rem;*/
-        /*width: 4rem;*/
-        /*background-image: url('./beer_glass_s.png');*/
-    /*}*/
-
+@media (min-width: 768px) {
+    .beer_menu__button {
+        padding: 0 2rem 0 0;
+    }
 }
 
 @media (min-width: 1024px) {
-    .beer_menu__button {
-        font-size: 1rem;
-        padding-bottom: 0;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        margin-bottom: 0;
-        border-right: 0.125rem solid #921e2d;
-    }
-    .beer_menu__button:first-child {
-        border-left: 0.125rem solid #921e2d;
-    }
-
 
     .beer_menu__buttons {
+        justify-content: center;
+    }
+    .beer_menu__button {
+        font-size: 1rem;
+        border-right: 0.125rem solid #921e2d;
+        padding: 1rem;
+        width: inherit;
         margin: 0;
+    }
+    /* .beer_menu__button:first-child {
+        border-left: 0.125rem solid #921e2d;
+    } */
+     .beer_menu__button:last-child {
+        border-right: none;
     }
 }

@@ -1,13 +1,16 @@
 .sortBtnCont {
     flex-basis: 10%;
-    margin-top: 3.59%;
     left: 8px;
     background-color: #fff;
     -webkit-box-shadow: 7px 0px 40px -8px rgba(112,111,111,1);
     -moz-box-shadow: 7px 0px 40px -8px rgba(112,111,111,1);
     box-shadow: 7px 0px 40px -8px rgba(112,111,111,1);
     padding: 8px;
-    /*position: fixed;*/
+    display: none;
+    /* position: absolute;
+    z-index: 2;
+    top: 0;
+    left: -50rem; */
 }
 
 .sortBy {
@@ -41,4 +44,10 @@
 
 .sortBtn:last-child {
     margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .sortBtnCont {
+        display: block;
+    }
 }

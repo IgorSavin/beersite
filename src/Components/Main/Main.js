@@ -1,7 +1,6 @@
 import React from 'react';
 import style from './Main.css'
 import Gallery from '../Gallery/Gallery';
-import BeerFilter from '../Filters/Filters';
 import Sort from '../Sort/Sort'
 
 
