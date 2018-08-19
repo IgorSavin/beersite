@@ -1,7 +1,7 @@
 export default function gallery (state = [], action) {
     switch(action.type) {
         case 'GALLERY_FETCH': 
-            const addIsActiveKey = action.data.map(el =>  ({...el, isActive: false}))
+            const addIsActiveKey = action.data.map(el =>  ({...el, isActive: false}));
             return [...addIsActiveKey];
 
         case 'IS_ACTIVE': 
@@ -26,8 +26,9 @@ export default function gallery (state = [], action) {
             return [...state.sort((a,b) =>a.id - b.id)];
 
         case 'FILTER_DATA':
-            const result = action.dataArr.filter( el => el.srm > action.firstParam && el.srm < action.secondParam ? el : null );
+            const result = state.filter( el => el.srm > action.firstParam && el.srm < action.secondParam ? el : null );
             return state= [...result];
+
         case ('FOODAPIREADY'):
             return [...action.data];
 

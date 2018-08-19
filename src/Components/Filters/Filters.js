@@ -2,13 +2,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styles from './Filters.css';
-import {getGalleryAsync,filterData } from '../../react/actions/galleryActions';
+import { filterData } from '../../react/actions/galleryActions';
+
 
 
 const BeerFilter =(props)=>{
     console.log(props);
     const getBeer = (e)=> {
-         props.getFilterBeer(props.gallery,e.target.dataset.first, e.target.dataset.second);
+         props.fetchFunc(e.target.dataset.first, e.target.dataset.second);
 
        // function handleMenuClick({target}){
        //     const arr = [...target.parentNode.children];
@@ -29,12 +30,11 @@ const BeerFilter =(props)=>{
     return (
     <nav className={styles.beer_menu}>
         <ul className={styles.beer_menu__buttons}>
-            <li className={styles.beer_menu__button} onClick={props.fetchFunc}>ALL </li>
-            <li className={styles.beer_menu__button} data-first='1' data-second='6' onClick={getBeer}>Lager, Pilsner, Wheat Beer </li>
+            <li className={styles.beer_menu__button} data-first='0' data-second='500' onClick={getBeer}>ALL</li>
+            <li className={styles.beer_menu__button} data-first='1' data-second='6' onClick={getBeer}>Lager, Pilsner, Wheat Beer</li>
             <li className={styles.beer_menu__button} data-first='5' data-second='20' onClick={getBeer}>Pale Ale, IPA, Amber Ale</li>
             <li className={styles.beer_menu__button} data-first='19' data-second='500' onClick={getBeer}>Brown Ale, Porter, Stout</li>
         </ul>
-        {/*<button onClick={props.fetchFunc}>TEST</button>*/}
     </nav>
     )
 };
@@ -48,10 +48,7 @@ function mapStateToProps (state) {
 function mapDispatchToProps (dispatch) {
     return {
         fetchFunc: function(a,b) {
-            dispatch(getGalleryAsync(a,b))
-        },
-        getFilterBeer: function(arr, first,second) {
-            dispatch(filterData(arr, first,second))
+            dispatch(filterData(a,b))
         },
     }}
 export default connect(mapStateToProps,mapDispatchToProps)(BeerFilter)
