@@ -11,7 +11,7 @@ const Busket = (props) => {
     // let classReact = React.createClass({color: 'white'})
     return (
         <div className={styles.position}>
-            <button onClick={props.busketActive} className={styles.rotman}>Title</button>
+            <button onClick={props.busketActive}>Title</button>
                       
             
             <div className={styles.container}>
