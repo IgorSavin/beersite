@@ -1,6 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
+import {NavLink} from 'react-router-dom';
 import Card from '../Card/Card';
 import {expandMobileMenu, collapseMobileMenu} from '../../react/actions/mobileMenuActions';
 import styles from './Header.css';
@@ -36,9 +37,9 @@ const Header = (props) => {
                 </ul>
             }
             <ul className={styles.header__menu}>
-                <li className={styles["header__menu-item"]}>Home</li>
-                <li className={styles["header__menu-item"]}>Favorites</li>
-                <li className={styles["header__menu-item"]}>Featured</li>
+                <li className={styles["header__menu-item"]}><NavLink exact to='/'>Home</NavLink></li>
+                <li className={styles["header__menu-item"]}><NavLink to='/favorites'>Favorites</NavLink></li>
+                <li className={styles["header__menu-item"]}><NavLink to='/'>Featured</NavLink></li>
             </ul>
 
             <span className={styles["header__basketicon"]}>

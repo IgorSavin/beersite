@@ -8,6 +8,7 @@ const Favorite = (props) => {
     // if (props.favorites.length === 0) return;
     return (
         <div className={styles.cardCont}>
+            <h2>Favorite Beers</h2>
             {props.favorites.map(el => <Card
                 img={el.image_url}
                 name={el.name}

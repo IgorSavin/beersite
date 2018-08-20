@@ -11,7 +11,7 @@ Header {
 .header__wrapper {
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    height: 80vh;
     background-size: cover !important;
     background-image: url('./img/bg2.jpg');
 }
@@ -157,13 +157,19 @@ Header {
 
     .header__menu-item:hover {
         /*font-weight: 700;*/
+        color: #fff;
         border-bottom: 1px solid #fff;
+    }
+
+    .header__menu-item a {
+        color: #fff;
+        text-decoration: none;
     }
 
     .header__content {
         display: flex;
         justify-content: space-between;
-        padding-top: 4rem;
+        padding-top: 1rem;
     }
 
     .header__random-product {

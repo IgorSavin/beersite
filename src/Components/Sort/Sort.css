@@ -49,5 +49,7 @@
 @media (min-width: 768px) {
     .sortBtnCont {
         display: block;
+        position: relative;
+        top: 5.75rem;
     }
 }

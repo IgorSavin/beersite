@@ -60,6 +60,11 @@
 }
 
 @media (min-width: 768px) {
+    .beer_menu {
+        position: relative;
+        top: -1.5625rem;
+    }
+
     .beer_menu__button {
         padding: 0 2rem 0 0;
     }

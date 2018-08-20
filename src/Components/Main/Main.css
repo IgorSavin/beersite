@@ -11,16 +11,3 @@
     margin: auto;
     padding: 0 1rem;
 }
-
-.content {
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-}
-
-@media(min-width: 768px) {
-    .content{
-        justify-content: space-between;
-    }
-    
-}

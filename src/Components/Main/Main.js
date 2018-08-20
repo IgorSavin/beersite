@@ -1,19 +1,22 @@
 import React from 'react';
-import style from './Main.css'
-import Gallery from '../Gallery/Gallery';
-import Sort from '../Sort/Sort'
+import style from './Main.css';
+import {history} from '../../react/store/store';
+import {ConnectedRouter} from 'connected-react-router';
+import {Switch, Route} from 'react-router-dom';
+import MainContent from '../MainContent/MainContent';
 import Favorite from '../Favorite/Favorite';
 
 const Main = () => {
     return (
         <div className={style.wrapper}>
-            <div className={style.container}>
-
-            <div className={style.content}>
-               <Sort/>
-               <Gallery/>
-            </div> 
-            </div>
+            <ConnectedRouter history={history}>
+                <div className={style.container}>
+                    <Switch>
+                        <Route exact path='/' component={MainContent}/>
+                        <Route path='/favorites' component={Favorite}/>
+                    </Switch>
+                </div>
+            </ConnectedRouter>
         </div>
 
     );
