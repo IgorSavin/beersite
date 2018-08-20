@@ -18,17 +18,17 @@ const BeerFilter = (props) => {
             <ul className={styles.beer_menu__buttons}>
                 <li className={styles.beer_menu__button} data-first='1' data-second='6' onClick={getBeer}>Lager,
                     Pilsner, Wheat Beer
-                    <TooltipsForFilters tooltipId = '0' data-for='svgTooltip' />
+                    <TooltipsForFilters tooltipId = '0' data-for='svgTooltip'/>
                 </li>
                 <li className={styles.beer_menu__button} data-first='5' data-second='20' onClick={getBeer}>Pale Ale,
                     IPA, Amber Ale
-                    <TooltipsForFilters tooltipId = '1' data-for='svgTooltip' />
+                    <TooltipsForFilters tooltipId = '1' data-for='svgTooltip'/>
                 </li>
                 <li className={styles.beer_menu__button} data-first='19' data-second='500' onClick={getBeer}>Brown Ale,
                     Porter, Stout
                     <TooltipsForFilters tooltipId = '2' data-for='svgTooltip'/>
                 </li>
-                <ReactTooltip id='svgTooltip'/>
+                <ReactTooltip id='svgTooltip' delayShow={1000} type= 'info' html={true} offset={{bottom: 10}}/>
             </ul>
             {/*<button onClick={props.fetchFunc}>TEST</button>*/}
         </nav>
