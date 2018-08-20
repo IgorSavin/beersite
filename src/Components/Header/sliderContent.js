@@ -3,7 +3,7 @@ import BgImg2 from './img/bg2.jpg';
 import BgImg3 from './img/bg3.jpg';
 import BgImg4 from './img/bg4.jpg';
 
-export const sliderContent = [
+export const SliderContent = [
     {
         quote: `"Beer is proof that God loves us and wants us to be happy."`,
         author: 'Benjamin Franklin',

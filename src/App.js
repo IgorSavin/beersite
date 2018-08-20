@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main'
 import {getRandomProductAsync} from './react/actions/randomActions';
+import {loadSliderData} from "./react/actions/sliderActions";
 import {galleryAsync} from './react/actions/galleryActions'
 import './App.css';
 
@@ -10,6 +11,7 @@ class App extends Component {
 
     componentDidMount() {
         this.props.getRandomProd();
+        // this.props.loadSliderData();
         this.props.galleryFetch();
     };
 
@@ -26,6 +28,7 @@ class App extends Component {
 function MSTP(state) {
     return {
         randomProduct: state.randomProduct,
+        sliderData: state.sliderData,
     }
 }
 
@@ -33,6 +36,9 @@ function MDTP (dispatch) {
     return {
         getRandomProd: function() {
             dispatch(getRandomProductAsync())
+        },
+        loadSliderData: function() {
+            dispatch(loadSliderData())
         },
         galleryFetch: function() {
             dispatch(galleryAsync())

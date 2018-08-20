@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export function getRandomProduct(data) {
     return {
-        type: 'DOWNLOADED',
+        type: 'RANDOM_PROD',
         payload: data,
     }
 }
