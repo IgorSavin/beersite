@@ -2,30 +2,25 @@ import React from 'react';
 import styles from './Card.css';
 import star from './star.svg'
 import starActive from './starActive.svg'
-import {favourite, favouriteOff} from '../../react/actions/favoriteActions'
+import {toggleFavorite} from '../../react/actions/favoriteActions'
 import {connect} from 'react-redux'
 
 const Card = (props) => {
+    const toggleFav = () => {
+       props.favouriteToggle([props.randomProduct, ...props.gallery].find(el => el.id === props.id));
+    };
 
-    const favouriteOn= () => {
-        props.favouriteOn(props.id)
-    }
-
-    const favouriteOff = () => {
-        props.favouriteOff(props.id)
-    }
+    const isFav = (id) => {
+        return props.favorites.some(el => el.id === +id)
+    };
 
     return (
         <div className={styles.beerCard}>
 
-
-
-            {props.isActive 
-                ? <img src={starActive} alt="favourite" className={styles.star} onClick={favouriteOff}/>
-                : <img src={star} alt="favourite" className={styles.star} onClick={favouriteOn}/>
+            {isFav(props.id)
+                ? <img src={starActive} alt="favourite" className={styles.star} onClick={toggleFav}/> //favouriteOff
+                : <img src={star} alt="favourite" className={styles.star} onClick={toggleFav}/> // favouriteOn
             }
-            
-            
 
             <div className={styles.imgCont}>
                 <img src={props.img} alt="beer" className={styles.bottleImg}/>
@@ -43,22 +38,27 @@ const Card = (props) => {
 
             <div className={styles.btnCont}>
                 <button className={styles.moreBtn}>More...</button>
-                <button className={styles.cartBtn}>ADD TO CART</button>
+                <button className={styles.cartBtn}
+                >ADD TO CART</button>
             </div>
         </div>
     );
 };
 
+function MSTP(state) {
+    return {
+        gallery: state.gallery,
+        favorites: state.favorites,
+        randomProduct: state.randomProduct,
+    }
+}
+
 function MDTP (dispatch) {
     return {
-        favouriteOn: function(id) {
-            dispatch(favourite(id))
-        },
-
-        favouriteOff: function(id) {
-            dispatch(favouriteOff(id))
+        favouriteToggle: function(prod) {
+            dispatch(toggleFavorite(prod))
         }
     }
 }
 
-export default  connect(null, MDTP) (Card);
+export default  connect(MSTP, MDTP) (Card);

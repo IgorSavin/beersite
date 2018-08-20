@@ -9,7 +9,6 @@ import styles from './Gallery.css';
 
 const Gallery = (props) => {
     return (
-        // <div className={styles.gslleryCont}>
         <div className={styles.gallery__body}>
             <BeerFilter/>
             <FoodForm/>
@@ -26,8 +25,6 @@ const Gallery = (props) => {
                 />)}
             </div>
         </div>
-
-        // </div>
     );
 };
 

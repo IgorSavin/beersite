@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Main.css'
 import Gallery from '../Gallery/Gallery';
 import Sort from '../Sort/Sort'
-
+import Favorite from '../Favorite/Favorite';
 
 const Main = () => {
     return (

@@ -14,6 +14,10 @@
     margin-bottom: 0;
 }
 
+.beerCard:last-child {
+    margin-bottom: 0;
+}
+
 .imgCont:hover .overlay {
     opacity: 1;
 }
@@ -60,7 +64,7 @@
 }
 
 .abv {
-    color: #adada7;
+    color: #969690;
     font-weight: 500;
     /* background-color: #fff; */
 }
@@ -83,7 +87,7 @@
     color: #2c2c26;
     font-weight: 600;
     font-size: 16px;
-    background-color: #fff;
+    background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;

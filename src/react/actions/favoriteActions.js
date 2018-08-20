@@ -1,10 +1,4 @@
-export const favourite = (id) => ({
-    type: 'IS_ACTIVE',
-    id
-})
-
-export const favouriteOff = (id) => ({
-    type: 'DISACTIVE',
-    id
-})
-
+export const toggleFavorite = (data) => ({
+    type: 'TOGGLE_FAVORITE',
+    data: data
+});
