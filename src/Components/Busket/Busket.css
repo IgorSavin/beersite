@@ -26,7 +26,7 @@
     box-shadow: 0.625rem 0 0.625rem 0 rgba(0, 0, 0, 0.15);
     position: absolute;
     /* top: 0; */
-    right: 0;
+    left: 0;
     min-height: 100%;
     transition: 1s;
     /* transform: rotate(1turn); */
@@ -40,7 +40,7 @@
     transition: 1s;
     width: 100%;
     top: -50rem;
-    right: -100rem;
+    left: -100rem;
 }
 
 .items{
