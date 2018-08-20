@@ -1,7 +1,6 @@
 .container {
     display: flex;
     justify-content: space-between;
-    background-color: #e41b00;
     flex-wrap: wrap;
     height: 30rem;
 }
