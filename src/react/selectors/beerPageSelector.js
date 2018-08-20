@@ -1,5 +1,5 @@
 
-export const beerPageCard = state => state.foodfilter[0] || state.beerpage;
+export const beerPageCard = state => state.beerpage;
 export const name = state => beerPageCard(state).name;
 export const description = state => beerPageCard(state).description;
 export const dishes = state => beerPageCard(state).food_pairing;

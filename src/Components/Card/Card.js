@@ -1,9 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import star from './star.svg';
+import starActive from './starActive.svg';
+import {toggleFavorite} from '../../react/actions/favoriteActions';
+import {connect} from 'react-redux';
 import styles from './Card.css';
-import star from './star.svg'
-import starActive from './starActive.svg'
-import {toggleFavorite} from '../../react/actions/favoriteActions'
-import {connect} from 'react-redux'
+
 
 const Card = (props) => {
     const toggleFav = () => {
@@ -37,7 +39,9 @@ const Card = (props) => {
             </div>
 
             <div className={styles.btnCont}>
-                <button className={styles.moreBtn}>More...</button>
+                <NavLink to={`/beerPage/${props.name}`}>
+                    <button className={styles.moreBtn}>More...</button>
+                </NavLink>
                 <button className={styles.cartBtn}
                 >ADD TO CART</button>
             </div>
