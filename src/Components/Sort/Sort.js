@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Sort.css';
 import {connect} from 'react-redux';
+import TooltipsObj from '../Tooltips/TooltipsObj';
 import {sortByAbv, sortByIbu, sortByEbc, sortByPrice, resetSort} from '../../react/actions/sortActions';
 
 const Sort = (props) => {
@@ -8,16 +9,16 @@ const Sort = (props) => {
         <div className={styles.sortBtnCont}>
             <p className={styles.sortBy}>Sort beer by:</p>
             <button className={styles.sortBtn} 
-                    onClick={props.sortByAbv}>ABV</button>
+                    onClick={props.sortByAbv} data-for='svgTooltip' data-tip={TooltipsObj.ABV}>ABV</button>
             
             <button className={styles.sortBtn} 
-                    onClick={props.sortByIbu}>IBU</button>
+                    onClick={props.sortByIbu} data-for='svgTooltip' data-tip={TooltipsObj.IBU}>IBU</button>
 
             <button className={styles.sortBtn}
-                    onClick={props.sortByEbc}>EBC</button>
+                    onClick={props.sortByEbc} data-for='svgTooltip' data-tip={TooltipsObj.EBC}>EBC</button>
 
             <button className={styles.sortBtn}
-                    onClick={props.sortByPrice}
+                    onClick={props.sortByPrice} data-for='svgTooltip' data-tip={TooltipsObj.Price}
             >Price</button>
 
             <button className={styles.sortBtn}

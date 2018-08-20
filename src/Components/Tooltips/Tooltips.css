@@ -1,0 +1,20 @@
+.svgIcon {
+    display: none;
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    top: 0;
+    left: 5%;
+}
+.svgIcon path {
+    transition: 250ms;
+}
+
+.svgIcon:hover path {
+    fill: #292;
+}
+@media (min-width: 768px) {
+    .svgIcon {
+        display: block;
+    }
+}
