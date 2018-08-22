@@ -7,5 +7,3 @@ const getGallery=()=>axios.get(`${END_POINT}page=2&per_page=80`).then(data=>data
 export const getGalleryAsync=()=> dispatch=>{
     getGallery().then(data=>dispatch(galleryHandler(data)));
 };
-
-export const getFilterBeer =(first,second)=> ({ type:"FILTER_BEER", firstParam:first, secondParam:second});
